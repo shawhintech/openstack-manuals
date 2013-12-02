@@ -25,7 +25,7 @@
         <listitem>
             <para>If the volume is not attached, the Block Storage
                 Service creates a volume and copies the data from the
-                original to the new volume. Note that while most
+                original to the new volume. Note: While most
                 back-ends support this function, not all do. See
                 driver documentation in the <link
                     xlink:href="http://docs.openstack.org/havana/config-reference/content/"
@@ -37,7 +37,7 @@
             <para>If the volume is attached to a VM instance, the
                 Block Storage Service creates a volume, and calls
                 Compute to copy the data from the original to the new
-                volume. Currently this is supported only by the
+                volume. Currently, this is supported by the
                 Compute libvirt driver.</para>
         </listitem>
     </orderedlist>
@@ -95,7 +95,7 @@ server2@lvmstorage-2    zone1</computeroutput></screen>
                 volume named
                     <literal>volume-6088f80a-f116-4331-ad48-9afb0dfb196c</literal>.
                 During the course of a migration, if you create a
-                volume and copy over the data, the volume get the new name but keeps its
+                volume and copy over the data, the volume gets the new name but keeps its
                 original ID. This is
                 exposed by the <literal>name_id</literal>
                 attribute.</para>
@@ -141,7 +141,7 @@ server2@lvmstorage-2    zone1</computeroutput></screen>
         back-end, you find the logical volume
             <literal>volume-133d1f56-9ffc-4f57-8798-d5217d851862</literal>.</para>
     <note>
-        <para>The migration is not be visible to non-admin users (for
+        <para>The migration is not visible to non-admin users (for
             example, through the volume <literal>status</literal>).
             However, some operations are not be allowed while a
             migration is taking place, such as attaching/detaching a
@@ -149,7 +149,7 @@ server2@lvmstorage-2    zone1</computeroutput></screen>
             action during a migration, an error is returned.</para>
     </note>
     <note>
-        <para>Migrating volumes that have snapshots is currently not
+        <para>Migrating volumes that have snapshots are currently not
             allowed.</para>
     </note>
 </section>
